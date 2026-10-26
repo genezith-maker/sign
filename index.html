@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="th">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ป้ายทางด่วน</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#111;font-family:Sarabun,sans-serif}
+  .sign{width:min(94vw,900px);background:#555c60;padding:14px 0;border-radius:6px;box-shadow:0 0 30px #000}
+  .row{display:flex;justify-content:space-around;padding:4px 0}
+  .dot{width:14px;height:14px;border-radius:50%;background:#ff9a4d;box-shadow:0 0 10px #ff7a1a;animation:b 1s steps(1) infinite}
+  .bot .dot{animation-delay:-.5s}
+  @keyframes b{0%{opacity:1}50%{opacity:.1;box-shadow:none}}
+  .text{margin:10px 14px;padding:20px 10px;background:#23282b;color:#f08a4b;text-align:center;
+    font-size:clamp(18px,4vw,38px);font-weight:700;line-height:1.5;outline:none;white-space:pre-wrap;min-height:3em}
+  p{position:fixed;bottom:8px;color:#888;font-size:13px;width:100%;text-align:center}
+</style>
+<div class="sign">
+  <div class="row top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+  <div class="text" contenteditable spellcheck="false">อุบัติเหตุ รถเสียโปรดนำรถชิดขอบทางซ้าย
+โทรแจ้ง 02-664-6400 หรือ 1543
+และโปรดรอเจ้าหน้าที่อยู่ภายในรถ</div>
+  <div class="row bot"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+</div>
+<p>คลิกที่ข้อความบนป้ายเพื่อพิมพ์แก้ได้เลย</p>
