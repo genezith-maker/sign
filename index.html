@@ -22,4 +22,10 @@
 และโปรดรอเจ้าหน้าที่อยู่ภายในรถ</div>
   <div class="row bot"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
 </div>
+<script>
+const t=document.querySelector('.text'),c=new BroadcastChannel('sign');
+try{const v=localStorage.sign;if(v)t.innerText=v}catch(e){}
+t.oninput=()=>{c.postMessage(t.innerText);try{localStorage.sign=t.innerText}catch(e){}};
+c.onmessage=e=>{if(t.innerText!==e.data)t.innerText=e.data};
+</script>
 <p>คลิกที่ข้อความบนป้ายเพื่อพิมพ์แก้ได้เลย</p>
